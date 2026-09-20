@@ -1,0 +1,83 @@
+========================================
+PROCESS COUNT: 2
+========================================
+
+--- Exercise01/sum_bcast ---
+[Bcast] Correct?  = YES
+[Bcast] Time      = 0.006642 sec
+
+--- Exercise02/sum_scatter ---
+[Scatter] Correct?  = YES
+[Scatter] Time      = 0.006834 sec
+
+--- Exercise03/sum_gather ---
+[Gather] Correct?  = YES
+[Gather] Time      = 0.005472 sec
+
+--- Exercise04/sum_reduce ---
+[Reduce] Correct?  = YES
+[Reduce] Time      = 0.003336 sec
+
+--- Exercise05/sum_allreduce ---
+[Allreduce] Correct?  = YES
+[Allreduce] Time      = 0.008989 sec
+
+--- Exercise06/sum_scan ---
+[Scan] Correct?             = YES
+[Scan] Time                 = 0.027455 sec
+
+========================================
+PROCESS COUNT: 4
+========================================
+
+--- Exercise01/sum_bcast ---
+[Bcast] Correct?  = YES
+[Bcast] Time      = 0.020796 sec
+
+--- Exercise02/sum_scatter ---
+[Scatter] Correct?  = YES
+[Scatter] Time      = 0.008801 sec
+
+--- Exercise03/sum_gather ---
+[Gather] Correct?  = YES
+[Gather] Time      = 0.014258 sec
+
+--- Exercise04/sum_reduce ---
+[Reduce] Correct?  = YES
+[Reduce] Time      = 0.005293 sec
+
+--- Exercise05/sum_allreduce ---
+[Allreduce] Correct?  = YES
+[Allreduce] Time      = 0.003125 sec
+
+--- Exercise06/sum_scan ---
+[Scan] Correct?             = YES
+[Scan] Time                 = 0.007079 sec
+
+========================================
+PROCESS COUNT: 8
+========================================
+
+--- Exercise01/sum_bcast ---
+[Bcast] Correct?  = YES
+[Bcast] Time      = 0.025040 sec
+
+--- Exercise02/sum_scatter ---
+[Scatter] Correct?  = YES
+[Scatter] Time      = 0.007703 sec
+
+--- Exercise03/sum_gather ---
+[Gather] Correct?  = YES
+[Gather] Time      = 0.016902 sec
+
+--- Exercise04/sum_reduce ---
+[Reduce] Correct?  = YES
+[Reduce] Time      = 0.006281 sec
+
+--- Exercise05/sum_allreduce ---
+[Allreduce] Correct?  = YES
+[Allreduce] Time      = 0.006280 sec
+
+--- Exercise06/sum_scan ---
+[Scan] Correct?             = YES
+[Scan] Time                 = 0.012069 sec

@@ -1,0 +1,89 @@
+========================================
+Running Exercise01/sum_bcast with 4 processes
+========================================
+Root filled array with values 1 to 1000000
+Rank 0: summed indices [0, 250000) => local_sum = 31250125000
+Rank 1: summed indices [250000, 500000) => local_sum = 93750125000
+Rank 3: summed indices [750000, 1000000) => local_sum = 218750125000
+Rank 2: summed indices [500000, 750000) => local_sum = 156250125000
+
+[Bcast] Total sum = 500000500000
+[Bcast] Expected  = 500000500000
+[Bcast] Correct?  = YES
+[Bcast] Time      = 0.038930 sec
+
+========================================
+Running Exercise02/sum_scatter with 4 processes
+========================================
+Root filled array with values 1 to 1000000
+Rank 1: summed indices [250000, 500000) => local_sum = 93750125000
+Rank 2: summed indices [500000, 750000) => local_sum = 156250125000
+Rank 3: summed indices [750000, 1000000) => local_sum = 218750125000
+Rank 0: summed indices [0, 250000) => local_sum = 31250125000
+
+[Scatter] Total sum = 500000500000
+[Scatter] Expected  = 500000500000
+[Scatter] Correct?  = YES
+[Scatter] Time      = 0.007261 sec
+
+========================================
+Running Exercise03/sum_gather with 4 processes
+========================================
+Root filled array with values 1 to 1000000
+Rank 3: summed indices [750000, 1000000) => local_sum = 218750125000
+Rank 1: summed indices [250000, 500000) => local_sum = 93750125000
+Rank 0: summed indices [0, 250000) => local_sum = 31250125000
+
+[Gather] Partial sums in rank order:
+Rank 0 partial sum = 31250125000
+Rank 1 partial sum = 93750125000
+Rank 2 partial sum = 156250125000
+Rank 3 partial sum = 218750125000
+
+[Gather] Total sum = 500000500000
+[Gather] Expected  = 500000500000
+[Gather] Correct?  = YES
+[Gather] Time      = 0.005699 sec
+Rank 2: summed indices [500000, 750000) => local_sum = 156250125000
+
+========================================
+Running Exercise04/sum_reduce with 4 processes
+========================================
+Root filled array with values 1 to 1000000
+Rank 3: summed indices [750000, 1000000) => local_sum = 218750125000
+Rank 1: summed indices [250000, 500000) => local_sum = 93750125000
+Rank 0: summed indices [0, 250000) => local_sum = 31250125000
+Rank 2: summed indices [500000, 750000) => local_sum = 156250125000
+
+[Reduce] Total sum = 500000500000
+[Reduce] Expected  = 500000500000
+[Reduce] Correct?  = YES
+[Reduce] Time      = 0.007063 sec
+
+========================================
+Running Exercise05/sum_allreduce with 4 processes
+========================================
+Root filled array with values 1 to 1000000
+Rank 0: local_sum = 31250125000, total_sum = 500000500000, contribution = 6.25%
+Rank 2: local_sum = 156250125000, total_sum = 500000500000, contribution = 31.25%
+
+[Allreduce] Total sum = 500000500000
+[Allreduce] Expected  = 500000500000
+[Allreduce] Correct?  = YES
+[Allreduce] Time      = 0.036088 sec
+Rank 1: local_sum = 93750125000, total_sum = 500000500000, contribution = 18.75%
+Rank 3: local_sum = 218750125000, total_sum = 500000500000, contribution = 43.75%
+
+========================================
+Running Exercise06/sum_scan with 4 processes
+========================================
+Root filled array with values 1 to 1000000
+Rank 0: local_sum = 31250125000, prefix_sum = 31250125000, sum_before_me = 0, prefix_correct = YES
+Rank 1: local_sum = 93750125000, prefix_sum = 125000250000, sum_before_me = 31250125000, prefix_correct = YES
+Rank 2: local_sum = 156250125000, prefix_sum = 281250375000, sum_before_me = 125000250000, prefix_correct = YES
+Rank 3: local_sum = 218750125000, prefix_sum = 500000500000, sum_before_me = 281250375000, prefix_correct = YES
+
+[Scan] Last rank prefix sum = 500000500000
+[Scan] Expected total       = 500000500000
+[Scan] Correct?             = YES
+[Scan] Time                 = 0.014757 sec
